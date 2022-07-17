@@ -14,11 +14,18 @@
 }
 
 nav {
-    position: relative;
-    margin-top: 30px;
+    position: fixed;
+    width: 100%;
+    padding: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    z-index: 5;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.nav_logo {
+    z-index: 10;
 }
 nav ul {
     display: flex;
@@ -52,4 +59,120 @@ nav i {
     font-size: 40px;
     color: #03045E;
     cursor: pointer;
-} 
+    z-index: 10;
+}
+
+@media (max-width: 1000px) {
+    nav ul {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        height: 110vh;
+        top: -20px;
+        left: -100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: #0098FF;
+        transition: all 0.3s ease;
+    } 
+    .active ul {
+        left: 0%;
+    }
+    nav ul li a {
+        color: #FFFFFF;
+    }
+    nav ul li a:hover {
+        color: #FFFFFF;
+    }
+    .login_button {
+        padding: 11px 35px;
+        background-color: #0098FF;
+        color: #FFFFFF;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    } 
+    .active i {
+        color: #FFFFFF;
+    }
+    nav i {
+        display: block !important;
+    }
+}
+@media (max-width: 600px) {
+    .nav_logo {
+        width: 100px;
+    }
+    nav i {
+        font-size: 30px;
+    }
+}
+
+.home {
+    background-color: #F6F6F6;
+    min-height: 950px;
+    padding: 50px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+}
+.home_text {
+    max-width: 585px;
+}
+.home_title {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    color: #03045E;
+}
+.home_p {
+    margin: 35px 0px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(3, 4, 94, 0.5);
+}
+.home_button {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: #FFFFFF;
+
+    width: max-content;
+
+    padding: 17px 38px;
+    background-color: #0098FF;
+    border-radius: 5px;
+    transition: all 0.3s ease;   
+}
+.home_button:hover {
+    color: #FFFFFF;
+    background-color: #03045E;
+}
+@media (max-width: 1350px) {
+    .home {
+        background-color: #F6F6F6;
+        min-height: 1200px;
+        padding: 50px;
+        width: 100%;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 50px;
+
+        text-align: center;
+    }    
+}
+@media (max-width: 800px) {
+    .home_img {
+        width: 90%;
+    }
+}
