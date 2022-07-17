@@ -210,6 +210,7 @@ nav i {
     font-size: 32px;
     line-height: 37px;
     color: #03045E;
+    padding: 0px 10px;
 }
 .t {
     display: flex;
