@@ -194,7 +194,6 @@ nav i {
     display: flex;
     justify-content: center;
     align-items: center;
-
     column-gap: 69px;
 }
 .search_dm {
@@ -378,4 +377,52 @@ nav i {
     .sec_boxs {
         grid-template-columns: repeat(1, 250px);   
     }   
+}
+
+.stat {
+    padding: 100px 0px;
+    background: #0098FF;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+    row-gap: 70px;
+    grid-template-columns: repeat(4, 297px);
+    text-align: center;
+}
+.stat_num {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    color: #FFFFFF;  
+}
+.stat_text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #FFFFFF;   
+}
+
+@media (max-width: 1340px) {
+    .stat {
+        grid-template-columns: repeat(2, 297px);
+    }
+}
+@media (max-width: 680px) {
+    .stat {
+        grid-template-columns: repeat(1, 297px);
+    }
+}
+@media (max-width: 350px) {
+    .stat {
+        grid-template-columns: repeat(1, auto);
+    }
+}
+@media (max-width: 300px) {
+    .stat {
+        grid-template-columns: repeat(1, 200px);
+    }
 }
